@@ -233,14 +233,14 @@ function typeWriter(element, text, speed = 50) {
     type();
 }
 
-// ===== Parallax Effect on Hero Graphic =====
-const heroGraphic = document.querySelector('.hero-graphic');
+// ===== Parallax Effect on Hero Network =====
+const heroNetwork = document.querySelector('.hero-network');
 
-if (heroGraphic) {
+if (heroNetwork) {
     window.addEventListener('mousemove', (e) => {
         const x = (window.innerWidth / 2 - e.pageX) / 50;
         const y = (window.innerHeight / 2 - e.pageY) / 50;
 
-        heroGraphic.style.transform = `translateY(${y}px) translateX(${x}px)`;
+        heroNetwork.style.transform = `translateY(${y}px) translateX(${x}px)`;
     });
 }

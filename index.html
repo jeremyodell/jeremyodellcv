@@ -37,7 +37,49 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="hero-graphic"></div>
+                <svg class="hero-network" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Connection lines -->
+                    <g class="network-lines">
+                        <line x1="200" y1="80" x2="120" y2="160" />
+                        <line x1="200" y1="80" x2="280" y2="160" />
+                        <line x1="200" y1="80" x2="200" y2="200" />
+                        <line x1="120" y1="160" x2="80" y2="260" />
+                        <line x1="120" y1="160" x2="200" y2="200" />
+                        <line x1="280" y1="160" x2="320" y2="260" />
+                        <line x1="280" y1="160" x2="200" y2="200" />
+                        <line x1="200" y1="200" x2="120" y2="280" />
+                        <line x1="200" y1="200" x2="280" y2="280" />
+                        <line x1="200" y1="200" x2="200" y2="320" />
+                        <line x1="80" y1="260" x2="120" y2="280" />
+                        <line x1="320" y1="260" x2="280" y2="280" />
+                        <line x1="120" y1="280" x2="200" y2="320" />
+                        <line x1="280" y1="280" x2="200" y2="320" />
+                        <line x1="60" y1="200" x2="120" y2="160" />
+                        <line x1="60" y1="200" x2="80" y2="260" />
+                        <line x1="340" y1="200" x2="280" y2="160" />
+                        <line x1="340" y1="200" x2="320" y2="260" />
+                    </g>
+                    <!-- Nodes -->
+                    <g class="network-nodes">
+                        <circle cx="200" cy="80" r="8" class="node node-primary" />
+                        <circle cx="120" cy="160" r="6" class="node" />
+                        <circle cx="280" cy="160" r="6" class="node" />
+                        <circle cx="200" cy="200" r="10" class="node node-primary" />
+                        <circle cx="80" cy="260" r="5" class="node" />
+                        <circle cx="320" cy="260" r="5" class="node" />
+                        <circle cx="120" cy="280" r="6" class="node" />
+                        <circle cx="280" cy="280" r="6" class="node" />
+                        <circle cx="200" cy="320" r="8" class="node node-primary" />
+                        <circle cx="60" cy="200" r="4" class="node node-small" />
+                        <circle cx="340" cy="200" r="4" class="node node-small" />
+                    </g>
+                    <!-- Pulse rings on primary nodes -->
+                    <g class="pulse-rings">
+                        <circle cx="200" cy="80" r="8" class="pulse" />
+                        <circle cx="200" cy="200" r="10" class="pulse pulse-delay-1" />
+                        <circle cx="200" cy="320" r="8" class="pulse pulse-delay-2" />
+                    </g>
+                </svg>
             </div>
         </div>
         <div class="scroll-indicator">

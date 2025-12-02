@@ -349,6 +349,92 @@ img {
     align-items: center;
 }
 
+/* Network Graphic */
+.hero-network {
+    width: 400px;
+    height: 400px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.network-lines line {
+    stroke: var(--silver-dark);
+    stroke-width: 1;
+    opacity: 0.3;
+    transition: var(--transition-smooth);
+}
+
+.hero-network:hover .network-lines line {
+    opacity: 0.5;
+    stroke: var(--silver);
+}
+
+.network-nodes .node {
+    fill: var(--silver-dark);
+    transition: var(--transition-smooth);
+}
+
+.network-nodes .node-primary {
+    fill: var(--silver);
+    filter: drop-shadow(0 0 8px rgba(192, 192, 192, 0.5));
+}
+
+.network-nodes .node-small {
+    fill: var(--silver-muted);
+}
+
+.hero-network:hover .network-nodes .node {
+    fill: var(--silver);
+}
+
+.hero-network:hover .network-nodes .node-primary {
+    fill: var(--silver-light);
+    filter: drop-shadow(0 0 12px rgba(192, 192, 192, 0.7));
+}
+
+/* Pulse animation on primary nodes */
+.pulse-rings .pulse {
+    fill: none;
+    stroke: var(--silver);
+    stroke-width: 2;
+    opacity: 0;
+    animation: pulse 3s ease-out infinite;
+}
+
+.pulse-delay-1 {
+    animation-delay: 1s !important;
+}
+
+.pulse-delay-2 {
+    animation-delay: 2s !important;
+}
+
+@keyframes pulse {
+    0% {
+        r: 8;
+        opacity: 0.6;
+    }
+    100% {
+        r: 30;
+        opacity: 0;
+    }
+}
+
+/* Data flow animation along lines */
+.network-lines line {
+    stroke-dasharray: 5 5;
+    animation: dataFlow 20s linear infinite;
+}
+
+@keyframes dataFlow {
+    from {
+        stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: -100;
+    }
+}
+
+/* Legacy - keep for compatibility */
 .hero-graphic {
     width: 400px;
     height: 400px;
